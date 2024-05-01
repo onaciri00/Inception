@@ -10,3 +10,6 @@ RUN apt-get install -y curl
 COPY ./extra/script.sh /
 #see whta php need to be run.
 
+RUN chmod 777 script.sh
+
+CMD ["sh", "./script.sh"]
