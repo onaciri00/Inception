@@ -14,5 +14,3 @@ COPY ./conf/maria_script.sh /
 RUN chmod 777 maria_script.sh
 
 CMD ["sh", "maria_script.sh"]
-
-# ENTRYPOINT ["bash", "./maria_script.sh"]
