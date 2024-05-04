@@ -13,4 +13,6 @@ COPY ./conf/maria_script.sh /
 
 RUN chmod 777 maria_script.sh
 
+EXPOSE 3306
+
 CMD ["sh", "maria_script.sh"]
