@@ -25,7 +25,7 @@ wp core download --allow-root
 
 #to create a confg file(wp-config.php) for wordpress it configure how wrdpress should connect  to mariadb(any database)
 #Note: if not used now the next command will ask for those information(cause it will try to create this file)
-wp core config --dbname=mydatabase --dbuser=myuser --dbpass=mypassword --dbhost=mariadb --allow-root
+wp core config --dbname=${MYSQL_DB} --dbuser=${MYSQL_USER} --dbpass=${MYSQL_PW} --dbhost=mariadb --allow-root
 
 #you might wonder why is this command necessary whene you already have "wp core download"
 #well cause the first command only bring the files doesn't set-up anything or configure anything
@@ -35,11 +35,11 @@ wp core config --dbname=mydatabase --dbuser=myuser --dbpass=mypassword --dbhost=
 #
 
 
-wp core install --allow-root --url=onaciri.42.fr --title=Inception --admin_user=onaciri --admin_password=password --admin_email=oussaman5000@gmail.com
+wp core install --allow-root --url=onaciri.42.fr --title=Inception --admin_user=${WP_USER} --admin_password=${WP_PW} --admin_email=${WP_EMAIL}
 
 
 #it create A user with this option username user email then password
-wp user create --allow-root oussma oussama@gmail.com --user_pass="password1"
+wp user create --allow-root ${WP_USER_NAME} ${WP_USER_EMAIL} --user_pass="${WP_USER_PASSWORD}"
 
 
 
