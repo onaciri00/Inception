@@ -10,10 +10,9 @@ server
     
     root /var/www/html/wordpress;
     index index.php;
-    location / {
-        try_files $uri $uri/ =404;
-    }
-       location ~ \.php$ {								
+
+       location ~ \.php$
+    {								
         include snippets/fastcgi-php.conf;
         fastcgi_pass wordpress:9000;				
     }

@@ -35,7 +35,7 @@ wp core config --dbname=${MYSQL_DB} --dbuser=${MYSQL_USER} --dbpass=${MYSQL_PW} 
 #
 
 
-wp core install --allow-root --url=onaciri.42.fr --title=Inception --admin_user=${WP_USER} --admin_password=${WP_PW} --admin_email=${WP_EMAIL}
+wp core install --allow-root --url=${DOMAIN_NAME} --title=${TITLE} --admin_user=${WP_USER} --admin_password=${WP_PW} --admin_email=${WP_EMAIL}
 
 
 #it create A user with this option username user email then password
