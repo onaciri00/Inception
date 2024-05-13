@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mariadb:
     image: mariadb
-    build: /home/onaciri_42/Inception/srcs/requirements/mariadb/.
+    build: ./requirements/mariadb/.
     container_name: mariadb
     restart: always
     env_file:
@@ -15,7 +15,7 @@ services:
 
   wordpress:
     container_name: wordpress
-    build: /home/onaciri_42/Inception/srcs/requirements/wordpress/.
+    build: ./requirements/wordpress/.
     restart: always
     env_file:
      - .env
@@ -29,7 +29,7 @@ services:
 
   nginx:
     container_name: nginx
-    build: /home/onaciri_42/Inception/srcs/requirements/nginx/.
+    build: ./requirements/nginx/.
     restart: always
     env_file:
      - .env

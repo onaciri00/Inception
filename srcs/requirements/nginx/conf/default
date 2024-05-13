@@ -3,15 +3,15 @@ server
     listen 443 ssl;
     server_name onaciri.42.fr;
 
-    ssl_certificate     /etc/nginx/ssl/inception.crt;
-    ssl_certificate_key /etc/nginx/ssl/inception.key;
+    ssl_certificate     path_credit;
+    ssl_certificate_key path_key;
 
     ssl_protocols       TLSv1.3;
     
     root /var/www/html/wordpress;
     index index.php;
 
-       location ~ \.php$
+    location ~ \.php$
     {								
         include snippets/fastcgi-php.conf;
         fastcgi_pass wordpress:9000;				
